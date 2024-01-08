@@ -17,7 +17,9 @@
     --toggle-color: #DDD;
     --box1-color: #4DA3FF;
     --box2-color: #FFE6AC;
+    --border: 1rem solid #095296;
     --box3-color: #E7D1FC;
+    --innertable-color: #99bfff;
     --title-icon-color: #fff;
     
     /* ====== Transition ====== */

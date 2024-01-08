@@ -10,6 +10,146 @@
 
     <title>TANSAM ADMIN</title> 
 </head>
+<style>
+    table.center {
+            margin-left: auto;
+            margin-right: auto;
+            width: 70%; /* Make sure the table takes up full width */
+        }
+
+        th, td {
+            padding: 1em 1em;
+            text-align: center;
+        }
+
+        th {
+            background-color: #0b3cc1;
+            color: #fff;
+        }
+
+        td {
+            border-top: 1px solid var(--innertable-color);
+            color: var(--text-color);
+            background-color: #eef1fa;
+        }
+        th .addblogs{
+            border-top: none;
+            border-bottom: none;
+            background-color: #fff;
+
+        }
+
+        td a{
+            color: #0b3cc1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .newaddress{
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newaddress .add-content{
+    padding: 2em;
+    margin: 1em;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: left;
+    width: 40rem; 
+}
+.add-content h3{
+    font-size: 2.5rem;
+    color: var(--orange);
+    text-transform: capitalize;   
+    padding-bottom: 1rem;
+}
+.add-content label{
+    font-size: 1.5rem;
+    color: var(--black);
+    text-transform: capitalize;   
+    padding-bottom: 1.5rem;
+    padding-left: 0.8rem;
+    font-weight: 600;
+
+}
+.add-content .box{
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border: var(--border);
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--black);
+    text-transform: capitalize;   
+}
+.blogdetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    box-shadow: var(--box-shadow);
+    flex-direction: column;
+}
+.blogdetails form{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+
+}
+.blogdetails form input{
+    width: 100%;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #0b3cc1;
+    outline: none;
+    font-size: .8rem;
+    color: var(--black);
+    text-transform: capitalize;   
+}
+.blogdetails form textarea{
+    width: 100%;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #0b3cc1;
+    outline: none;
+    font-size: .8rem;
+    color: var(--black);
+    text-transform: capitalize;   
+}
+.blogdetails form label{
+    font-size: 1rem;
+    color: #0b3cc1;
+    text-transform: capitalize;   
+    padding-bottom: 1rem;
+    font-weight: 600;
+}
+.blogdetails form input[type="submit"]{
+    width: 100%;
+    padding: 0.4rem;
+    margin-bottom: 1rem;
+    border-radius: .5rem;
+    border: 1px solid #0b3cc1;
+    outline: none;
+    font-size: 1rem;
+    color: var(--black);
+    text-transform: capitalize;   
+    background-color: #0b3cc1;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+</style>
 <body>
     <nav>
         <div class="logo-name">
@@ -79,76 +219,46 @@
         <div class="dash-content">
             <div class="overview">
                 <div class="title">
-                    <i class="uil uil-tachometer-fast-alt"></i>
-                    <span class="text">Dashboard</span>
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="text">Blogs</span>
                 </div>
-
-                <div class="boxes">
-                    <div class="box box1">
-                        <span class="text">Blogs Uploaded</span>
-                        <span class="number">50,120</span>
-                    </div>
-                    <div class="box box2">
-                        <span class="text">News Uploaded</span>
-                        <span class="number">20,120</span>
-                    </div>
-                    <div class="box box3">
-                        <span class="text">Testimonials Uploaded</span>
-                        <span class="number">10,120</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="activity">
+                <table class="center">
+                    <thead>
+                        <tr>
+                            <th>Blog Title</th>
+                            <th>Blog Date</th>
+                            <th>Blog Author</th>
+                            <th>Blog Status</th>
+                            <th>Blog Action</th>
+                        </tr>
+                        <tr>
+                            <td>Blog Title</td>
+                            <td>Blog Date</td>
+                            <td>Blog Author</td>
+                            <td>Blog Status</td>
+                            <td><a href="">Delete</a> / <a href="">Update</a></td>
+                        </tr>
+                    </thead>
+                </table>
                 <div class="title">
-                    <i class="uil uil-clock-three"></i>
-                    <span class="text">Recent Activity</span>
+                    <i class="uil uil-files-landscapes"></i>
+                    <span class="text">Add Blogs</span>
                 </div>
-
-                <div class="activity-data">
-                    <div class="data names">
-                        <span class="data-title">Content Name</span>
-                        <span class="data-list">Prem Shahi</span>
-                        <span class="data-list">Deepa Chand</span>
-                        <span class="data-list">Manisha Chand</span>
-                        <span class="data-list">Pratima Shahi</span>
-                        <span class="data-list">Man Shahi</span>
-                        <span class="data-list">Ganesh Chand</span>
-                        <span class="data-list">Bikash Chand</span>
-                    </div>
-                    <div class="data joined">
-                        <span class="data-title">Uploaded Date</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-15</span>
-                    </div>
-                    <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">Blogs</span>
-                        <span class="data-list">News</span>
-                        <span class="data-list">Testimonials</span>
-                        <span class="data-list">Blogs</span>
-                        <span class="data-list">News</span>
-                        <span class="data-list">Testimonials</span>
-                        <span class="data-list">Blogs</span>
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                    </div>
+                <div class="blogdetails">
+                    <form action="">
+                        <label for="blogtitle">Blog Title</label>
+                        <input type="text" name="blogtitle" id="blogtitle" class="box">
+                        <label for="blogdate">Blog Date</label>
+                        <input type="date" name="blogdate" id="blogdate" class="box">
+                        <label for="blogauthor">Blog Author</label>
+                        <input type="text" name="blogauthor" id="blogauthor" class="box">
+                        <label for="blogimage">Blog Image</label>
+                        <input type="file" name="blogimage" id="blogimage" class="box">
+                        <label for="blogcontent">Blog Content</label>
+                        <textarea name="blogcontent" id="blogcontent" cols="30" rows="10" class="box"></textarea>
+                        <input type="submit" value="Add Blog" class="box">
+                    </form>
                 </div>
-            </div>
-        </div>
     </section>
     <script>
         const body = document.querySelector("body"),

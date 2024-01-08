@@ -12,9 +12,11 @@
   --bg-color: #fff;
   --green: #009999 ;
   --orange: #FF6C00;
+  --border: 1rem solid #095296;
   --orange-light: #FF9D3A;
   --black: #130f40;
   --light-color: #666;
+  --innertable-color: #000000;
   --border: .1rem solid rgba(0,0,0,.1);
   --box-shadow: 0 0.5rem 1rem rgba(0, 255, 229, 0.292);
 }
