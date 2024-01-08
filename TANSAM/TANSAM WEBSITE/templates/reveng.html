@@ -29,7 +29,7 @@
       <i class='bx bx-menu'></i>
       <div class="logo"><img src="/static/images/logo.png" alt="logo"height="70">
         <div class="company">
-        <a href="#">TANSAM</a>
+        <a href="{{url_for('index')}}">TANSAM</a>
         <p>Powered by <span>SIEMENS</span></p>
       </div>
       </div>
@@ -39,7 +39,7 @@
           <i class='bx bx-x' ></i>
         </div>
         <ul class="links">
-          <li><a href="#">HOME</a></li>
+          <li><a href="{{url_for('index')}}">HOME</a></li>
           <li>
             <a href="#">OUR SOLUTIONS</a>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
@@ -48,7 +48,7 @@
               <li><a href="#">AUTONOMOUS SUPPLY CHAIN</a></li>
               <li><a href="#">AI SOLUTIONS</a></li>
               <li><a href="#">DIGITAL TWIN</a></li>
-              <li><a href="#">REVERSE ENGINEERING</a></li>
+              <li><a href="{{url_for('reverseEngineering')}}">REVERSE ENGINEERING</a></li>
               <li><a href="#">AUGEMENTED REALITY</a></li>
               <li><a href="#">VIRTUAL REALITY</a></li>
               <li><a href="#">NEW PRODUCT DEVELOPMENT</a></li>
@@ -58,13 +58,13 @@
             <a href="#">LABS</a>
             <i class='bx bxs-chevron-down htmlcss-arrow arrow  '></i>
             <ul class="htmlCss-sub-menu sub-menu">
-              <li><a href="#">PRODUCT INNOVATION</a></li>
-              <li><a href="#">INNOVATIVE MANUFACTURING</a></li>
+              <li><a href="{{url_for('productInnovation')}}">PRODUCT INNOVATION</a></li>
+              <li><a href="{{url_for('innovationManufacturing')}}">INNOVATIVE MANUFACTURING</a></li>
               <li><a href="#">SMART FACTORY AUTOMATION</a></li>
               <li><a href="#">PRODUCT LIFE CYCLE MANAGEMENT</a></li>
               <li><a href="#">ASSET LIFE CYCLE PERFORMANCE</a></li>
               <li><a href="#">PREDICTIVE ANALYSIS</a></li>
-              <li><a href="#">AR / VR RESEARCH</a></li>
+              <li><a href="{{url_for('ar_vr')}}">AR / VR RESEARCH</a></li>
             </ul>
           </li>
 
