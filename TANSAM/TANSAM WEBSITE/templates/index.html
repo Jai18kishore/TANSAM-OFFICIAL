@@ -11,6 +11,11 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
+   <style>
+    .admin{
+      color: var(--text-color);
+    }
+   </style>
 <body>
   <div class="sticky-social">
     <ul class="social">
@@ -360,8 +365,8 @@
             <a href="#"><i class="fa-brands fa-square-x-twitter"></i>X</a>
             <a href="#"><i class="fa-brands fa-square-instagram"></i>Instagram</a>
             <a href="#"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
-
         </div>
+        <a href="{{url_for('admin')}}" class="admin">Admin</a>
     </div>
     <h1 class="credit">Created By <span>TEAM JAK</span></h1>
 </section>
