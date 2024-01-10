@@ -61,11 +61,11 @@
 #login-btn{
     display: flex;
     align-items: center;
-    gap: 1rem;
     cursor: pointer;
     text-align: center;
     justify-content: center;
     cursor: pointer;
+    width: 10rem;
 }
 
 #close-login-form{
@@ -78,17 +78,85 @@
 }
 button{
   cursor: pointer;
+
+}
+.forgot{
+    position: fixed;
+    top: -105%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.forgot.active{
+    opacity: 1;
+    top: 0;
+    transition: all .5s ease;
+}
+.forgot form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 30rem;
+}
+.forgot form input{
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: .5rem;
+    border: var(--border);
+    outline: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.forgot form h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-color);
+}
+#forgot{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 10rem;
+    color: var(--text-color);
+    font-weight: 700;
 }
    </style>
 <body>
   <div class="login-form">
     <span class="fas fa-times" id="close-login-form"></span>
     <form action="/adminLogin" method="post">
-        <h3>Admin Login</h3>
+        <h3>ADMIN LOGIN</h3>
         <input type="email" name="username" id="username" placeholder="Email" class="box">
         <input type="password" name="password" id="password" placeholder="Password" class="box">
+        <div class="remember-me">
+        <div id="forgot">Forgot Password?</div>
         <button type="submit" name="clicked" value="Login Now" class="btn">Login Now</button>
     </form>
+</div>
+<div class="forgot">
+        <span class="fas fa-times" id="close-otp-form"></span>
+        <form action="">
+            <h3>OTP sent to registered email id</h3>
+            <input type="number" placeholder="OTP" class="box">
+            <input type="password" placeholder="New Password" class="box">
+            <input type="password" placeholder="Confirm Password" class="box">
+            <button type="submit" class="btn">Reset Password</button>
+        </form>
 </div>
   <div class="sticky-social">
     <ul class="social">
@@ -544,6 +612,12 @@ document.querySelector('#login-btn').onclick = () => {
 document.querySelector('#close-login-form').onclick = () => {
     document.querySelector('.login-form').classList.remove('active');
 }
+
+document.querySelector('#forgot').onclick = () => {
+    document.querySelector('.login-form').classList.remove('active');
+    document.querySelector('.forgot').classList.toggle('active');
+}
+
   </script>
 </body>
 </html>
