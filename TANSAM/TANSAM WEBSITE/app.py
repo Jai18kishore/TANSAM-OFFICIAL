@@ -34,6 +34,9 @@ def innovationManufacturing():
 def ar_vr():
     return render_template("arvr.html")    
 
+@app.route("/naanmudhalvan")
+def naanmudhalvan():
+    return render_template("nanmudhalvan.html")
 
 @app.route("/admin")
 def admin():

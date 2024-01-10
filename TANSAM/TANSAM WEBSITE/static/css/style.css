@@ -121,9 +121,10 @@ nav .navbar .links li a {
   font-size: 20px;
   font-weight: 600;
 }
-.links li:hover .htmlcss-arrow,
-.links li:hover .js-arrow {
-  transform: rotate(180deg);
+nav .navbar .links li a img{
+  width: 100px;
+  transition: all 0.3s ease;
+
 }
 
 nav .navbar .links li .arrow {
@@ -233,6 +234,7 @@ nav .navbar .links li:hover .js-sub-menu {
 
 .navbar .nav-links .sidebar-logo{
   display: none;
+  cursor: pointer;
 }
 .navbar .bx-menu{
   display: none;
