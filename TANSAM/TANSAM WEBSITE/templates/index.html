@@ -14,9 +14,54 @@
    <style>
     .admin{
       color: var(--text-color);
-    }
+    }.login-form{
+    position: fixed;
+    top: -105%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.login-form.active{
+    opacity: 1;
+    top: 0;
+    transition: all .5s ease;
+}
+.login-form form{
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    background: #fff;
+    border: var(--border);
+    text-align: center;
+    width: 40rem; 
+}
+
+#login-btn{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
    </style>
 <body>
+  <div class="login-form">
+    <span class="fas fa-times" id="close-login-form"></span>
+    <form action="/adminLogin" method="post">
+        <h3>User Login</h3>
+        <input type="email" name="username" id="username" placeholder="Email" class="box">
+        <input type="password" name="password" id="password" placeholder="Password" class="box">
+        <button type="submit" name="clicked" value="Login Now" class="btn">Login Now</button>
+    </form>
+</div>
   <div class="sticky-social">
     <ul class="social">
       <li class="fb"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
@@ -366,7 +411,10 @@
             <a href="#"><i class="fa-brands fa-square-instagram"></i>Instagram</a>
             <a href="#"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
         </div>
+        <div id="login-btn">
         <a href="{{url_for('admin')}}" class="admin">Admin</a>
+      </div>
+        
     </div>
     <h1 class="credit">Created By <span>TEAM JAK</span></h1>
 </section>
@@ -461,6 +509,13 @@ var swiper = new Swiper(".vehicles-slider", {
   },
 });
 
+document.querySelector('#login-btn').onclick = () => {
+    document.querySelector('.login-form').classList.toggle('active');
+}
+
+document.querySelector('#close-login-form').onclick = () => {
+    document.querySelector('.login-form').classList.remove('active');
+}
   </script>
 </body>
 </html>
