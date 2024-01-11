@@ -38,20 +38,27 @@ def ar_vr():
 def naanmudhalvan():
     return render_template("nanmudhalvan.html")
 
-@app.route("/admin")
-def admin():
-    return render_template("admin.html")
-
-@app.route("/adminLogin",methods=['POST','GET'])
+@app.route("/adminLogin")
 def adminLogin():
+    return render_template("login.html")
+
+@app.route("/adminIndex",methods=['POST'])
+def adminIndex():
     if request.method == 'POST':
         username=request.form.get('username')
         password=request.form.get('password')
         print(username,password)
-        if request.form.get('clicked')=='Login Now':
+        if username=='admin' and password=='admin':
             return render_template("admin.html")
     return render_template("index.html")
         
+@app.route("/adminBlogs")
+
+
+
 
 if __name__ == "__main__":
-    app.run(debug=True) 
+    try:
+        app.run(debug=True)
+    except:
+        print("Error in running the app")

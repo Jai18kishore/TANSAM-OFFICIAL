@@ -508,7 +508,7 @@ button{
             <a href="#"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
         </div>
         <div id="login-btn">
-        <a href="{{url_for('admin')}}" class="admin">Admin</a>
+        <a href="{{url_for('adminLogin')}}" class="admin">Admin</a>
       </div>
         
     </div>
@@ -612,12 +612,6 @@ document.querySelector('#login-btn').onclick = () => {
 document.querySelector('#close-login-form').onclick = () => {
     document.querySelector('.login-form').classList.remove('active');
 }
-
-document.querySelector('#forgot').onclick = () => {
-    document.querySelector('.login-form').classList.remove('active');
-    document.querySelector('.forgot').classList.toggle('active');
-}
-
   </script>
 </body>
 </html>
