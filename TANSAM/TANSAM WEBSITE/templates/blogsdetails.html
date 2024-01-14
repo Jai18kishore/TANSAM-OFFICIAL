@@ -95,16 +95,16 @@
   <div class="bloglinks reveal">
     <a href="/templates/index.html">Home</a>
     <i class='bx bx-chevron-right'></i>
-    <a href="/templates/index.html">Blogs</a>
+    <a href="/templates/index.html">{{type}}</a>
     <i class='bx bx-chevron-right'></i>
-    <a href="/templates/blogsdetails.html">Ayutha Pooja Celebrations</a>
+    <a href="/templates/blogsdetails.html">{{typetitle}}</a>
   </div>
   <div class="alldetails reveal">
   <div class="blogheader">
-    <h1>Ayutha Pooja Celebrations</h1>
+    <h1>{{typetitle}}</h1>
     <div class="blogdet">
     <div class="date">
-      <p>Posted on 12th October 2021</p>
+      <p>Posted on {{typedate}}</p>
     </div>
     <div class="content">
       <p>
@@ -139,7 +139,7 @@
       </p>
     </div>
     <div class="blogimage reveal">
-      <img src="/static/images/tansam pooja.jpg" alt="">
+      <img src="/static/images/{{typeImage}}" alt="">
     </div>
   </div>
   </div>

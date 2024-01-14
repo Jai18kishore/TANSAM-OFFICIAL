@@ -137,17 +137,6 @@ button{
 }
    </style>
 <body>
-  <div class="login-form">
-    <span class="fas fa-times" id="close-login-form"></span>
-    <form action="/adminLogin" method="post">
-        <h3>ADMIN LOGIN</h3>
-        <input type="email" name="username" id="username" placeholder="Email" class="box">
-        <input type="password" name="password" id="password" placeholder="Password" class="box">
-        <div class="remember-me">
-        <div id="forgot">Forgot Password?</div>
-        <button type="submit" name="clicked" value="Login Now" class="btn">Login Now</button>
-    </form>
-</div>
 <div class="forgot">
         <span class="fas fa-times" id="close-otp-form"></span>
         <form action="">
@@ -605,13 +594,6 @@ var swiper = new Swiper(".vehicles-slider", {
   },
 });
 
-document.querySelector('#login-btn').onclick = () => {
-    document.querySelector('.login-form').classList.toggle('active');
-}
-
-document.querySelector('#close-login-form').onclick = () => {
-    document.querySelector('.login-form').classList.remove('active');
-}
   </script>
 </body>
 </html>

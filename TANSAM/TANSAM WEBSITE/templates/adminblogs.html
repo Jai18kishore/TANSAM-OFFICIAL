@@ -162,19 +162,19 @@
 
         <div class="menu-items">
             <ul class="nav-links">
-                <li><a href="#">
+                <li><a href="{{url_for('admin')}}">
                     <i class="uil uil-estate"></i>
                     <span class="link-name">Home</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="/adminPosts/blogs">
                     <i class="uil uil-files-landscapes"></i>
                     <span class="link-name">Blogs</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="/adminPosts/news">
                     <i class="uil uil-chart"></i>
                     <span class="link-name">News</span>
                 </a></li>
-                <li><a href="#">
+                <li><a href="/adminPosts/testimony">
                     <i class="uil uil-comments"></i>
                     <span class="link-name">Testimonials</span>
                 </a></li>
@@ -220,44 +220,46 @@
             <div class="overview">
                 <div class="title">
                     <i class="uil uil-files-landscapes"></i>
-                    <span class="text">Blogs</span>
+                    <span class="text">{{type}}</span>
                 </div>
                 <table class="center">
                     <thead>
                         <tr>
-                            <th>Blog Title</th>
-                            <th>Blog Date</th>
-                            <th>Blog Author</th>
-                            <th>Blog Status</th>
-                            <th>Blog Action</th>
+                            <th>{{type}} Title</th>
+                            <th>{{type}} Date</th>
+                            <th>{{type}} Author</th>
+                            <th>{{type}} Status</th>
+                            <th>{{type}} Action</th>
                         </tr>
                         <tr>
-                            <td>Blog Title</td>
-                            <td>Blog Date</td>
-                            <td>Blog Author</td>
-                            <td>Blog Status</td>
+                            <td>{{type}} Title</td>
+                            <td>{{type}} Date</td>
+                            <td>{{type}} Author</td>
+                            <td>{{type}} Status</td>
                             <td><a href="">Delete</a> / <a href="">Update</a></td>
                         </tr>
                     </thead>
                 </table>
                 <div class="title">
                     <i class="uil uil-files-landscapes"></i>
-                    <span class="text">Add Blogs</span>
+                    <span class="text">Add {{type}}</span>
                 </div>
                 <div class="blogdetails">
-                    <form action="">
-                        <label for="blogtitle">Blog Title</label>
-                        <input type="text" name="blogtitle" id="blogtitle" class="box">
-                        <label for="blogdate">Blog Date</label>
-                        <input type="date" name="blogdate" id="blogdate" class="box">
-                        <label for="blogauthor">Blog Author</label>
-                        <input type="text" name="blogauthor" id="blogauthor" class="box">
-                        <label for="blogimage">Blog Image</label>
-                        <input type="file" name="blogimage" id="blogimage" class="box">
-                        <label for="blogcontent">Blog Content</label>
-                        <textarea name="blogcontent" id="blogcontent" cols="30" rows="10" class="box"></textarea>
-                        <input type="submit" value="Add Blog" class="box">
+                    
+                    <form action="/postDetails/{{type}}" method="post" enctype="multipart/form-data">
+                        <label for="{{type}}title">{{type}} Title</label>
+                        <input type="text" name="{{type}}title" id="{{type}}title" class="box">
+                        <label for="{{type}}date">{{type}} Date</label>
+                        <input type="date" name="{{type}}date" id="{{type}}date" class="box">
+                        <label for="{{type}}author">{{type}} Author</label>
+                        <input type="text" name="{{type}}author" id="{{type}}author" class="box">
+                        <label for="{{type}}image">{{type}} Image</label>
+                        <input type="file" name="{{type}}image" id="{{type}}image" class="box">
+                        <label for="{{type}}content">{{type}} Content</label>
+                        <textarea name="{{type}}content" id="{{type}}content" cols="30" rows="10" class="box"></textarea>
+                        <input type="submit" name="clicked"   value="Add {{type}}" class="box">
                     </form>
+
                 </div>
     </section>
     <script>
